@@ -1,0 +1,27 @@
+/**
+ * Create a method that creates a for loop that prints out a certain set of numbers
+ * @author Justin Raping
+ */
+public class SimpleLoop
+{
+
+	public static void main(String[] args)
+	{
+		//create a method
+		countSomeNums();
+
+	}
+
+	//method that executes the task
+	private static void countSomeNums()
+	{
+		//create a for loop that produces the ouput following the criteria
+		for (int i=1;i<7;i++)
+		{
+			//print said output
+			System.out.println((18*i)-22);
+		}
+		
+	}
+
+}
