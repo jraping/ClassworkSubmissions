@@ -1,0 +1,51 @@
+/**
+ * 
+ */
+public class Cake 
+{
+	//give the filling a flavor
+	String flavor;
+	int layers;
+	public Cake(String filling, int n) 
+	{
+		//assign a flavor to this cake
+		this.flavor = filling;
+		
+		//assign layers equal to 1
+		this.layers = n;
+	}
+	
+	public Cake (String filling)
+	{
+		this.flavor = new String ("Poop");
+		this.layers=1;
+		
+	}
+	
+	public String getFlavor(String filling)
+	{
+		return filling;
+	}
+	
+	public int getLayers(int layers)
+	{
+		return layers;
+	}
+	
+	public void setFlavor(String newFlavor)
+	{
+		this.flavor = newFlavor;
+	}
+	
+	public static void tellIfTasty()
+	{
+		System.out.println("The cake is yummy");
+	}
+	
+	public void incrementLayer()
+	{
+		this.layers++;
+	}
+
+
+}
