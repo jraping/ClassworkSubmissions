@@ -1,0 +1,53 @@
+/**
+ * create a method that multiplies numbers without "*"
+ * @author Justin Raping
+ */
+public class MathStuffDec5 
+{
+
+	public static void main(String[] args) 
+	{
+		//call a method that passes two ints and mults them
+		multTwoNums(3, 3);
+		
+		//declare two numbers to test math methods on
+		int myInt = -4;
+		double myDub = -16.0;
+		
+		//test the sqrt method. it should test the square root
+		double mySqrt = Math.sqrt(myDub);
+		System.out.println(mySqrt);
+		
+		//test the abs method. it should produce
+		double absDub = Math.abs(myDub);
+		System.out.println(absDub);
+		
+		double absInt = Math.abs(myInt);
+		System.out.println(absInt);
+		
+		//test the pow method
+		//it only works with double
+		double base = 2.0;
+		double exp = 5.0;
+		double prod = Math.pow(base, exp);
+		System.out.println(prod);
+		
+		Math.floor((Math.random() * 10) + 1);
+	}
+
+	public static void multTwoNums(int x, int y) 
+	{
+		//declare an int adder
+		int adder = x;
+		//add x to itself y times
+		for (int i=1;i<y;i++)
+		{
+			//add adder to x
+			x *= adder;
+		}
+		//print x
+		System.out.println(x);
+		
+	}
+
+}
