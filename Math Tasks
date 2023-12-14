@@ -1,0 +1,144 @@
+/**
+ * create a method that multiplies numbers without "*"
+ * @author Justin Raping
+ */
+public class MathStuffDec5 
+{
+
+	public static void main(String[] args) 
+	{
+		//call a method that passes two ints and mults them
+		multTwoNums(3, 3);
+		
+		//TASK 1
+		genRandomNums();
+		
+		//declare two numbers to test math methods on
+		int myInt = -4;
+		double myDub = -16.0;
+		
+		//test the sqrt method. it should test the square root
+		double mySqrt = Math.sqrt(myDub);
+		System.out.println(mySqrt);
+		
+		//test the abs method. it should produce
+		double absDub = Math.abs(myDub);
+		System.out.println(absDub);
+		
+		double absInt = Math.abs(myInt);
+		System.out.println(absInt);
+		
+		//test the pow method
+		//it only works with double
+		double base = 2.0;
+		double exp = 5.0;
+		double prod = Math.pow(base, exp);
+		System.out.println(prod);
+		
+		//TASK 1: Instantiate an integer object
+		Integer myInteger = 4;
+		
+		
+		//print out the max and min values an Integer can store
+		System.out.println(Integer.MIN_VALUE);
+		System.out.println(Integer.MAX_VALUE);
+		
+		//TASK 2:Instantiate a double object
+		Double myDouble = 6.6;
+		
+		//print out the max and min values a double can store
+		System.out.println(Double.MIN_VALUE);
+		System.out.println(Double.MAX_VALUE);
+		
+		//wrapper classes
+		
+		//TASK 3:Declare an int and print it as a double
+		//this is how to cast 
+		int a = 5;
+
+		System.out.println(    (double) a     );
+		
+		//TASK 4:Declare a double and print it as an int
+		double b = 3.2;
+		
+		System.out.println(      (int)b      );
+		
+		//declare ints and doubles
+		//TASK 2 & 3
+		int intA = -36;
+		int intB = 12;
+		double dubA = -100.0;
+		double dubB = 0.64;
+		
+		//instantiate int and double objects
+		//TASK 4 & 5
+		Integer integerA = -36;
+		Integer integerB = 12;
+		Double doubleA = -100.0;
+		Double doubleB = 0.64;
+		
+		//use methods to print product of exponents
+		//TASK 6, 7, 8, 9
+		multTwoNums(intA, intB);
+		multTwoNums(integerA, integerB);
+		multTwoNums((int)dubA, (int)dubB);
+		multTwoNums((int) (double) doubleA, (int) (double) doubleB);
+		
+		//TASK 10
+		double dubintA = Math.abs(intA);
+		System.out.println(dubintA);
+		
+		double dubintegerA = Math.abs(integerA);
+		System.out.println(dubintegerA);
+		
+		double dubdubA = Math.abs(dubA);
+		System.out.println(dubdubA);
+		
+		double dubdoubleB = Math.abs(doubleB);
+		System.out.println(dubdoubleB);
+		
+		//TASK 11
+		double sqrtdubB = Math.sqrt(dubB);
+		System.out.println(sqrtdubB);
+	
+		double sqrtdoubleB = Math.sqrt(doubleB);
+		System.out.println(sqrtdoubleB);
+		
+		//TASK 12
+		System.out.println(Math.sqrt(dubintA));
+		System.out.println(Math.sqrt(dubintegerA));
+		
+		//TASK 13
+		System.out.println(Math.pow(dubA, dubB));
+		
+		//TASK 14
+		System.out.println(Math.pow(intA, dubB));
+		
+		//TASK 15
+		System.out.println(Math.pow(doubleA, integerA));
+	}
+
+
+	public static void genRandomNums() 
+	{
+		double randomNum = Math.floor((Math.random() * (10-1)) + 1);
+		System.out.println(randomNum);
+
+	}
+
+	public static void multTwoNums(int x, int y) 
+	{
+		//declare an int adder
+		int adder = x;
+		//add x to itself y times
+		for (int i=1;i<y;i++)
+		{
+			//add adder to x
+			x *= adder;
+		}
+		//print x
+		System.out.println(x);
+		
+	}
+
+}
