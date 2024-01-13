@@ -1,0 +1,39 @@
+/**
+ * @author Justin Raping
+ */
+public class CountCharacters 
+{
+
+	public static void main(String[] args) 
+	{
+		//instantiate a string and char
+		String object = new String("AQQQAABHQ");
+		char aChar = 'A';
+		//create a method to count how many chars are in the string
+		countChars(object, aChar);
+		
+		System.out.println(countChars(object, aChar));
+
+	}
+
+	public static int countChars(String object, char aChar) 
+	{
+		//create a counter for how many chars are in the string
+		int x=0;
+		//for loop to make life easier
+		for (int i=0;i<object.length();i++)
+		{
+			//check the string
+			if (object.charAt(i)==aChar)
+			{
+				//increase the counter for every char in the string
+				x++;
+			}
+
+		}
+		//return the counter
+		return x;
+		
+	}	
+
+}
