@@ -20,11 +20,22 @@ public class Writing_Psuedocode
 		int x=input.indexOf("d");
 		
 		//print out the number before the d
-		System.out.println("The first character is " + input.substring(0,x));
+		System.out.println("The first number is " + input.substring(0,x));
 		
 		//print out the number after the d
 		System.out.println("The second number is " + input.substring(x+1));
 		
+		//assign the first and last number(s) before and after the d equal to a string
+		String first = input.substring(0,x);
+		String last = input.substring(x+1);
+		
+		//turn those strings into an int and assign it a variable
+		int f = Integer.valueOf(first);
+		int l = Integer.valueOf(last);
+
+		//print the sum of the first and last numbers
+		System.out.println("The sum of the first and second number is " + (f+l));
+			
 		//close the scanner so scanner doesn't run forever
 		myReader.close();
 	}
