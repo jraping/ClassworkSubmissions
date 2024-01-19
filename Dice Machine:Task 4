@@ -1,0 +1,70 @@
+/**
+ * Create a code that prints out the number before and
+ * after the d
+ * @author Justin Raping
+ */
+//import a scanner to take an input from the user
+import java.util.Scanner;
+public class Writing_Psuedocode 
+{
+
+	public static void main(String[] args) 
+	{
+		//create a scanner to take the input
+		Scanner myReader=new Scanner(System.in);
+		
+		//assign the input to a string
+		String input =myReader.nextLine();
+		
+		//set the place value of where d first occurs to an int
+		int x=input.indexOf("d");
+		
+		//print out the number before the d
+		System.out.println("The first number is " + input.substring(0,x));
+		
+		//print out the number after the d
+		System.out.println("The second number is " + input.substring(x+1));
+		
+		//assign the first and last number(s) before and after the d equal to a string
+		String first = input.substring(0,x);
+		String last = input.substring(x+1);
+		
+		//turn those strings into an int and assign it a variable
+		int f = Integer.valueOf(first);
+		int l = Integer.valueOf(last);
+		
+		//add the first and last number together to get the sum
+		System.out.println("The sum of the first and second number is " + (f+l));
+		
+		//create a method that'll produce a number based on how many and
+		//what kind of dice are rolled and print the result
+		int result=0;
+		rollDice(f, l, result);
+			
+		//close the scanner so scanner doesn't run forever
+		myReader.close();
+	}
+
+	private static int rollDice(int f, int l, int result) 
+	{
+		//create a for loop that'll roll the dice a certain amount of
+		//times
+		for (int i=0;i<f;i++)
+		{
+			//generate a random number
+			double outcome = Math.random()*l;
+			//turn the random number to a int and set it equal to an int
+			int value = (int)outcome;
+			//print out the int
+			System.out.println(value);
+			//add the int to the result
+			result += value;
+		}
+  //print out the sum of the random numbers
+		System.out.println("The sum of the results is " + result);
+//return to main method
+		return result;	
+
+	}
+
+}
