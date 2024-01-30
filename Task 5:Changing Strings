@@ -1,0 +1,74 @@
+/**
+ * Create a Class that removes the spaces from a string and prints
+ *the new string without any spaces
+ *@author Justin Raping
+ */
+//import a scanner to take inputs
+import java.util.Scanner;
+public class Changing_Strings 
+{
+
+	public static void main(String[] args) 
+	{
+		//create a scanner to take input from user
+		Scanner inputReader = new Scanner(System.in);
+		
+		//set the input equal to a string variable
+		String input = inputReader.nextLine();
+		
+		//set the number of spaces in the string equal to an int
+		int numOfSpaces= countChars(input);
+		
+		//run stringConc method which removes the spaces from a string
+		stringConc(numOfSpaces,input);
+		
+		//print the brand new string 
+		System.out.println(stringConc(numOfSpaces,input));
+		
+
+	}
+
+	private static String stringConc(int numOfSpaces, String input) 
+	{
+		//create a for loop that runs the amount of times the string has
+		//spaces
+		for (int i=0;i<numOfSpaces;i++)
+		{
+			//set x equal to the first occurrence of a space
+			int x = input.indexOf(' ');
+			//reassign the string to equal everything before 
+			//and after the 'space' 
+			//and keep doing so until there's no more spaces
+			input = input.substring(0,x)+input.substring(x+1);		
+
+		}
+		//return to main method
+		return input;
+
+		
+	}
+
+	private static int countChars(String input) 
+		{
+			//set x = 0 to set the base amount of spaces in the string
+			//create a counter for how many chars are in the string
+			int x=0;
+			//set 'space' equal to a character
+			char spaceChar = ' ';
+			//for loop to check the entire string for spaces
+			for (int i=0;i<input.length();i++)
+			{
+				//checks if the string has spaces at each individual char
+				if (input.charAt(i)==spaceChar)
+				{
+					//increase the counter for every char in the string
+					x++;
+				}
+
+			}
+			//return to main method
+			return x;
+		
+	}
+
+}
