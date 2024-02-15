@@ -9,9 +9,9 @@ public class Student
 	private double mathGrade;
 	private double theologyGrade;
 		
-	private int gradeLevel = 1;
+	private int gradeLevel;
 		
-	private String name = new String("Joseph Trauger");
+	private String name;
 		
 	/**
 	 * Constructor that sets initial value of 
@@ -19,12 +19,16 @@ public class Student
 	 * @param s scienceGrade
 	 * @param m mathGrade
 	 * @param t theologyGrade
+	 * @param l gradeLevel
+	 * @param n name
 	 */
-	public Student(double s, double m, double t)
+	public Student(double s, double m, double t, int l, String n)
 	{
 		scienceGrade = s;
 		mathGrade = m;
 		theologyGrade = t;
+		gradeLevel = l;
+		name = n;
 	}
 	
 	/**
