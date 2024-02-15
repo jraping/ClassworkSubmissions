@@ -1,0 +1,62 @@
+/**
+ * Class that stores the grades of a student
+ * along with grade level and student name
+ */
+public class Student 
+{
+	//list the properties/data attributes
+	private double scienceGrade;
+	private double mathGrade;
+	private double theologyGrade;
+		
+	private int gradeLevel = 1;
+		
+	private String name = new String("Joseph Trauger");
+		
+	/**
+	 * Constructor that sets initial value of 
+	 * data attributes to the formal parameters
+	 * @param s scienceGrade
+	 * @param m mathGrade
+	 * @param t theologyGrade
+	 */
+	public Student(double s, double m, double t)
+	{
+		scienceGrade = s;
+		mathGrade = m;
+		theologyGrade = t;
+	}
+	
+	/**
+	 * get the average of all grade values. 
+	 * @return a for average of all grades
+	 */
+	public double getGPA()
+	{
+		double a = getGPASum()/3;
+		return a;
+	}
+	
+	/**
+	 * return sum of all grades.
+	 * private because we only want to give user
+	 * access to the average of his/her grades
+	 * @return g for sum of grade
+	 */
+	private double getGPASum() 
+	{
+		//
+		double g = scienceGrade + mathGrade + theologyGrade;
+		return g;
+	}
+	
+	/**
+	 * returns a string that introduces the student's
+	 * grade level, name, and average GPA
+	 */
+	public String introduceSelf()
+	{
+		return ("I am a student in grade " + gradeLevel + ". My name is " + name + ". My average GPA is " + getGPA() + ".");
+	}
+		
+}
