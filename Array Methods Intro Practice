@@ -1,0 +1,62 @@
+/**
+ * Class to practice arrays through two various methods.
+ * @author Justin Raping
+ */
+public class ArrayMethodsIntroPractice
+{
+
+	public static void main(String[] args) 
+	{
+		//instantiate an array and int to past to
+		//the two methods
+		int[] arr = {2,4,6,8,10,12};
+		int n = 4;
+		
+		//create the methods and pass them the needed
+		//parameters
+		divideElementByTwo(arr, n);
+		giveFirstAndLastArray(arr);
+
+	}
+	
+	/**
+	 * return an array consisting of only the
+	 * first and last two elements of the passed array
+	 * @param arr
+	 * @return
+	 */
+	public static int[] giveFirstAndLastArray(int[] arr) 
+	{
+		//create two ints which are equal to the first
+		//and last element of the passed array
+		int firstEle = arr[0];
+		int lastEle = arr[arr.length -1];
+		
+		//create a new array consisting of only the
+		//first and last elements of the passed array
+		int[] onlyFirstAndLastArray = {firstEle, lastEle};
+
+		//return the new array 
+		return onlyFirstAndLastArray;
+		
+	}
+
+	/**
+	 *  Create a method that is passed an int array arr and an int n, 
+	 *  and the method will change arr such that its n'th element
+	 *  is divided by two.
+	 * @param arr
+	 * @param n
+	 */
+	public static void divideElementByTwo(int[] arr, int n) 
+	{
+		//create an int equal to the n'th element of the array
+		//which is also divided by 2
+		int dividedElement = arr[n]/2;
+		
+		//assign the n'th element's value equal to the new value
+		arr[n] = dividedElement;
+			
+	}
+
+}
