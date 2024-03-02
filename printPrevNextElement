@@ -1,0 +1,41 @@
+/**
+ * Make a method that is passed an array of doubles nums
+ * and an int n. The method should print out the number before
+ * and after the n'th element.
+ * @author Justin Raping
+ */
+public class printPrevNextElement
+{
+
+	public static void main(String[] args) 
+	{
+		//create an array and int to pass to the method
+		double[] arr = { 3.26, 8.84, 9.63, -4.22, 12.80 } ;
+
+		int index = 3;
+		
+		//create method which'll run the task
+		//for the assignment
+		printPrevnextElement(arr,index);
+
+	}
+	/**
+	 * method which'll print the number before
+	 * and after the element at the index
+	 * @param arr
+	 * @param index
+	 */
+	public static void printPrevnextElement(double[] arr, int index) 
+	{
+		//Precondition: the method will never be 
+		//passed an index that creates an ArrayIndexOutOfBoundsException 
+		//error.
+		//Print statement that'll print the number
+		//before and after the element
+		System.out.println("The number before the element at index " + index + " is " + 
+		arr[index-1] + " and the number after the element at index " + 
+		index + " is " + arr[index+1]);
+		
+	}
+
+}
