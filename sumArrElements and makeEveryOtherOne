@@ -1,0 +1,67 @@
+/**
+ * class to create a method where we return the sum of the elements
+ * and a method to change every other element in an array
+ * equal to 1
+ * @author Justin Raping
+ */
+public class TraversalPracticeMarch7
+{
+
+	public static void main(String[] args) 
+	{
+		//create an int and double array to pass to
+		//the methods
+		double[] nums = {2.0, 4.0, 8.0};
+		
+		sumArrElements(nums);
+		
+		
+		int[] evens = {2,4,6,8,10,12};
+		
+		makeEveryOtherOne(evens);
+		
+		//print out the sum for method 1 to check
+		//if it works
+		System.out.println(sumArrElements(nums));
+		
+	}
+
+	/**
+	 * method that makes every other element in the array
+	 * equal to 1
+	 * @param evens
+	 */
+	public static void makeEveryOtherOne(int[] evens) 
+	{
+		//create a int to put into the for loop which will
+		//traverse the method in order to set every other
+		//element equal to one
+		int traverser;
+		for (traverser=1;traverser<=evens.length-1;traverser=traverser+2);
+		{
+			evens[traverser]=1;
+		}
+		
+	}
+	
+	/**
+	 * method that returns that returns the sum of 
+	 *all the elements
+	 * @param nums
+	 * @return
+	 */
+	public static int sumArrElements(double[] nums) 
+	{
+		//create a variable which'll traverse
+		//through the method
+		//and add the sums together
+		int adder=0;
+		for (int i=0;i<=nums.length-1;i++)
+		{
+			adder+=nums[i];
+		}
+		
+		//return the sum or adder in this case
+		return adder;
+	}
+}
