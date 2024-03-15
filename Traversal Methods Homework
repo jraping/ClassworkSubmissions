@@ -1,0 +1,173 @@
+/**
+ * Class to practice traversing through methods
+ * @author Justin Raping
+ */
+public class Traversal_Methods_Homework
+{
+
+	public static void main(String[] args) 
+	{
+		//create arrays to pass to the methods
+		//and create methods to complete the
+		//assigned tasks
+		//Print methods to make sure it was done
+		//correctly
+		double[] array5 = {3.1, 7.1, 6.6, 9.3};
+		System.out.println(checkThreeSame(array5));
+		int[] array4 = {4,2,18};
+		System.out.println(checkIfHaveAllEven(array4));
+		int[] array3 = {1,6,9};
+		System.out.println(checkIfHaveEven(array3));
+		double[] array2 = {3.1, 4.2, 5.0, 6.2, 6.9};
+		System.out.println(returnAverage(array2));
+		int[] array1 = {2,6,3,9,1,11,4};
+		System.out.println(returnHighestArray(array1));
+		
+
+	}
+
+	/**
+	 * method that returns the highest element in an
+	 * array
+	 * @param array1
+	 * @return
+	 */
+	public static int returnHighestArray(int[] array1) 
+	{
+		//create an int equal to the first elememt
+		//in an array and a for loop to traverse
+		//through the array
+		int highestNumber=array1[0];
+		for (int i=0;i<=array1.length-2;i++)
+		{
+			
+			//keep the highest number the same if
+			//greater than the next element
+			if (highestNumber>array1[i+1])
+			{
+	
+			}
+			//if not greater than the next method, the next method
+			//becomes the highest number
+			else
+			{
+				highestNumber=array1[i+1];
+			}
+		}
+		//return the highest number
+		return highestNumber;
+		
+	}
+
+	/**
+	 * create a method that returns the average of all
+	 * the doubles in an array
+	 * @param array2
+	 * @return
+	 */
+	public static double returnAverage(double[] array2) 
+	{
+		//create a double that'll act as the sum
+		//and a for loop to traverse through the array
+		double sum=0.0;
+		for (int i=0; i<=array2.length-1;i++)
+		{
+			//the elements will be added to the sum
+			//each loop
+			sum += array2[i];
+		}
+		//create a double that will be the average
+		//and return the average
+		double average = sum/array2.length;
+		return average;
+		
+	}
+
+	/**
+	 * method to check if the array has any evens in it
+	 * @param array3
+	 * @return
+	 */
+	public static boolean checkIfHaveEven(int[] array3) 
+	{
+		//create a boolean that is set equal
+		//to false on default in the event that
+		//there is no evens
+		boolean hasAtLeastOneEven=false;
+		for (int i=0; i<=array3.length-1;i++)
+		{
+			//checks if the element is even and set
+			//equal to true if true
+			if (array3[i]%2==0)
+			{
+				hasAtLeastOneEven=true;
+			}
+		}
+		//return true
+		return hasAtLeastOneEven;
+		
+	}
+
+	/**
+	 * method to check if all the elements in an array
+	 * is even
+	 * @param array4
+	 * @return
+	 */
+	public static boolean checkIfHaveAllEven(int[] array4) 
+	{
+		//create a boolean that's set equal
+		//to false and a counter to help
+		//check if all the elements are even
+		boolean hasAllEvens=false;
+		int counter = 0;
+		for (int i=0; i<=array4.length-1;i++)
+		{
+			//checks if the element is even
+			//and increase counter by 1 if true
+			if (array4[i]%2==0)
+			{
+				counter++;
+			}
+			//if the counter is equal to the length
+			//of the array, set the boolean equal to true
+			if (counter==array4.length)
+			{
+				hasAllEvens=true;
+			}
+		}
+		//return the boolean
+		return hasAllEvens;
+		
+		
+	}
+
+	/**
+	 * method to check if the array has 3 consecutive doubles
+	 * @param array5
+	 * @return
+	 */
+	public static boolean checkThreeSame(double[] array5)
+	{
+		//create a traverser to traverse through the array
+		//create a boolean that's equal to false
+		int traverser=0;
+		boolean hasThree=false; 
+		
+		//create a for loop to traverse through the array
+		for (;traverser<=array5.length-3;traverser++)
+		{
+			//if statement to check if the 3 consecutive numbers are equal to each other
+			//and if so, set equal to true
+			if (array5[traverser]==array5[traverser+1] && array5[traverser]==array5[traverser+2])
+			{
+				hasThree=true;
+				
+			}
+		}
+		//return the boolean
+		return hasThree;
+		
+	}
+
+}
