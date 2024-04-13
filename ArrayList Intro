@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+
+public class ArrayListIntro 
+{
+
+	public static void main(String[] args) 
+	{
+		//
+		ArrayList<String> studentNames = new ArrayList<String>();
+		studentNames.add("Alice");
+		studentNames.add("Charlie");
+		studentNames.add("Dave");
+		studentNames.add("Elizabeth");
+		studentNames.add("Fieri");
+		studentNames.add("Gwen");
+		System.out.println(studentNames);
+		
+		studentNames.add(1, "Brittany");
+		System.out.println(studentNames);
+		studentNames.remove(2);
+		System.out.println(studentNames);
+		System.out.println(studentNames.get(2));
+		studentNames.set(3, "Evan");
+		System.out.println(studentNames);
+	}
+
+}
