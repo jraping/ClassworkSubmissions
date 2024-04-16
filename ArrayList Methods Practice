@@ -1,0 +1,57 @@
+/**
+ * Class to practice the unique methods of an array
+ * list
+ * @author Justin Raping
+ */
+import java.util.ArrayList;
+public class ArrayListMethodsInDepth 
+{
+
+	public static void main(String[] args) 
+	{
+			//instantiate an empty array list
+			ArrayList<String> foods = new ArrayList<String>();
+			
+			//add strings to the array list
+			foods.add("Apples");
+			foods.add("Bread");
+			foods.add("Cookies");
+			
+			//this method prints out the length of the
+			//array list. It returns the length of the
+			//array list in the form of an int which in
+			//this case is 3.
+			System.out.println(foods.size());
+			
+			//this line of code prints true
+			//This method adds "Dole Whip" to the end
+			//of the array list. It returns true in this 
+			//case and true in general.
+			System.out.println(foods.add("Dole Whip"));
+			System.out.println(foods.size());
+			
+			//this line of code prints "Bread"
+			//this line of code sets the element at 1 
+			//equal to butter.
+			//This method sets the instance of the element
+			//you chose and reassigns it a new value.
+			//It returns "Bread" in this case and in general,
+			//it returns the element it changed.
+			System.out.println(foods.set(1, "Butter"));
+			System.out.println(foods.size());
+			
+			//this line of code prints "Cookies"
+			//this line of code removes the element at the instance
+			//of 2 from the array list.
+			//This method removes the element at that
+			//specific instance from the array list.
+			//This method returns "Cookies" and in general
+			//the element you removed.
+			System.out.println(foods.remove(2));
+			System.out.println(foods.size());
+			
+			
+
+	}
+
+}
