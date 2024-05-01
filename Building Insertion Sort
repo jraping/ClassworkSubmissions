@@ -1,0 +1,144 @@
+/**
+ * Class to build an insertion sorter method
+ * @author Justin Raping
+ */
+public class InsertionSorter 
+{
+
+	public static void main(String[] args) 
+	{
+		//create arrays to pass to methods
+		//and print methods to confirm
+		//if it works properly
+		int[] array = {2,5,7,8,10,6};
+		printArr(arrayShifter(array));
+		
+		int[] array2 = {2,4,6,8,5,10,12};
+		int index=4;
+		printArr(arrayShifterTask2(array2,index));
+		
+		int[] array3 = {4,3,2,10,12,1,5,6};
+		printArr(insertionSort(array3));
+
+	}
+
+	/**
+	 * insertion sorter method to keep swapping
+	 * the smaller number as far left as can be 
+	 * @param array3
+	 * @return
+	 */
+	public static int[] insertionSort(int[] array3) 
+	{
+		//create for loop to traverse through array
+		for (int i=0; i<array3.length-1;i++)
+		{
+			//pass the array and index to 
+			//arrayShifter method we created 
+			arrayShifterTask2(array3,i);
+		}
+		//return array
+		return array3;
+		
+	}
+
+	/**
+	 * method that's passed an int index and will sort the value at that
+	 * index instead of the last index. (Precondition: the rest of the array will 
+	 * be sorted)
+	 * @param array2
+	 * @param index
+	 * @return
+	 */
+	public static int[] arrayShifterTask2(int[] array2, int index) 
+	{
+		//for loop to traverse through array
+	    for (int i = index; i < array2.length; i++)
+	    {
+	    	//create ints equal to the element
+	    	//at the index and the one before it
+	    	//to compare
+	    	int base = array2[i];
+	        int j = i - 1;
+	 
+	        //while loop to check if index is in 
+	        //bounds and greater than the base
+	        while (j >= 0 && array2[j] > base) 
+	        {
+	        	//if the element is greater than 
+	        	//the base, set next one
+	        	//equal to the element
+	        	//and subtract one from
+	        	//j to go backwards
+	            array2[j + 1] = array2[j];
+	            j--;
+	        }
+	        //make the element after the j index 
+	        //equal to the base
+	        array2[j + 1] = base;
+	    }
+	    //return array
+	    return array2;
+		
+	}
+
+	/**
+	 * method that sorts the last element 
+	 * in an array of ints into the right place
+	 * @param array
+	 * @return
+	 */
+	public static int[] arrayShifter(int[] array) 
+	{
+		//create an int equal to the length minus 1
+		int i=array.length-1;
+		//while loop to check if array exists
+		//and if the last element is less than
+		//the one before it
+		while (i>0 && array[i]<array[i-1])
+		{
+			//if so, switch the value of the 
+			//two elements
+			int place = array[i];
+			array[i]=array[i-1];
+			array[i-1]=place;
+			//take one away from i to go backwards
+			i--;
+		}
+		//return array
+		return array;
+		
+		
+	}
+	/**
+	 * method to print an array
+	 * @param arr
+	 */
+	public static void printArr(int[] arr) 
+	{
+		//declare a variable to be the thing that
+		//traverses the array
+		int counter = 0;
+		
+		//print out the brace
+		System.out.print("{");
+		//create a for method to print each 
+		//element in the array
+		for(;counter < arr.length ; counter++)
+		{
+			//print out each element
+			System.out.print( arr[counter] );
+			//if statement to keep printing commas
+			//after each element until the last one
+			if (counter!=arr.length-1)
+			{
+				//prints comma
+				System.out.print(", ");
+			}
+		}
+		//finish out printing the element by closing 
+		//it with a bracket
+		System.out.println("}");
+	}
+
+}
