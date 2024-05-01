@@ -1,0 +1,93 @@
+/**
+ * Class to practice turning array sorters into
+ * arraylist sorters
+ * @author Justin Raping
+ */
+import java.util.ArrayList;
+
+public class ArrayListSorters 
+{
+
+	public static void main(String[] args) 
+	{
+		//instantiate two ArrayLists to pass to 
+		//the methods
+		ArrayList<Integer> nums = new ArrayList<Integer>();
+		ArrayList<String> names = new ArrayList<String>();
+		
+		//add 5 unsorted values to the array lists
+		nums.add(7);
+		nums.add(3);
+		nums.add(10);
+		nums.add(52);
+		nums.add(49);
+		names.add("Joseph");
+		names.add("Edward");
+		names.add("Gabriel");
+		names.add("Hayden");
+		names.add("Brogan");
+		//create methods and pass it the
+		//assigned arraylists
+		bubbleSortNumbers(nums);
+		bubbleSortStrings(names);
+		System.out.println(nums);
+		System.out.println(names);
+
+	}
+
+	/**
+	 * method that bubble sorts strings
+	 * @param names
+	 */
+	public static void bubbleSortStrings(ArrayList<String> names) 
+	{
+		//create a for loop to traverse through
+		//the array list
+		for (int i=0; i<names.size()-1;i++)
+		{
+			//check the instance of each element through
+			//a nested for loop
+			for (int j=0; j<names.size()-1-i;j++)
+			{
+				//if statement to check if current
+				//element is greater than the next
+				//one
+				if(names.get(j).compareTo(names.get(j+1))>0)
+				{
+					//if greater than, switch the values
+					String temp  = names.set(j, names.get(j+1));
+					names.set(j+1, temp);
+				}
+			}
+		}
+		
+	}
+
+	/**
+	 * method that bubble sorts an arraylist of nums
+	 * @param nums
+	 */
+	public static void bubbleSortNumbers(ArrayList<Integer> nums) 
+	{	
+		//create a traversal to go through each number
+		for (int i=0; i<nums.size()-1;i++)
+		{
+			//check the instance of each element through
+			//a nested for loop
+			for (int j=0; j<nums.size()-1-i;j++)
+			{
+				//if statement to check if current
+				//element is greater than the next
+				//one
+				if(nums.get(j)>nums.get(j+1))
+				{
+					//if greater than, switch the values
+					int temp = nums.set(j, nums.get(j+1));
+					nums.set(j+1, temp);
+					
+				}
+			}
+		}
+	}
+
+}
