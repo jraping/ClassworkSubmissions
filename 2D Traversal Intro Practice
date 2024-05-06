@@ -1,0 +1,61 @@
+/**
+ * class to practice traversing 2d arrays
+ * @author Justin Raping
+ */
+public class TwoDArrayTraversal 
+{
+
+	public static void main(String[] args) 
+	{
+		//task 1:create a 2d array of strings
+		String[][] arr = {{"a", "a", "a", "a", "a", "a"},
+							{"b", "b", "b", "b", "b", "b"},
+							{"c", "c", "c", "c", "c", "c"},
+							{"d", "d", "d", "d", "d", "d"},
+							{"e", "e", "e", "e", "e", "e"},
+							{"f", "f" ,"f", "f", "f", "f"},
+							{"g", "g", "g", "g", "g", "g"}};
+		//task 2:manually print out the first character in each array
+		System.out.println(arr[0][0]);
+		System.out.println(arr[1][0]);
+		System.out.println(arr[2][0]);
+		System.out.println(arr[3][0]);
+		System.out.println(arr[4][0]);
+		System.out.println(arr[5][0]);
+		System.out.println(arr[6][0]);
+		
+		//task 3:create a for loop to print the first element in 
+		//each array
+		for (int i=0; i<arr.length;i++)
+		{
+			System.out.println(arr[i][0]);
+		}
+		
+		//task 4:manually print out all the elements in the first array
+		System.out.println(arr[0][0]);
+		System.out.println(arr[0][1]);
+		System.out.println(arr[0][2]);
+		System.out.println(arr[0][3]);
+		System.out.println(arr[0][4]);
+		System.out.println(arr[0][5]);
+		
+		//task 5:create a for loop to print all the elements
+		//in the first array
+		for (int i=0;i<arr[0].length;i++)
+		{
+			System.out.println(arr[0][i]);
+		}
+		
+		//task 6:create a for loop to print all the elements in
+		//each array
+		for (int i=0; i<arr.length;i++)
+		{
+			for (int j=0;j<arr[j].length;j++)
+			{
+				System.out.println(arr[i][j]);
+			}
+		}
+
+	}
+
+}
