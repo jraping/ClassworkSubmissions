@@ -1,0 +1,119 @@
+/**
+ * class to practice traversing 2d arrays
+ * @author Justin Raping
+ */
+public class TwoDArrayTraversal 
+{
+
+	public static void main(String[] args) 
+	{
+		//task 1:create a 2d array of strings
+		String[][] arr = {{"a", "a", "a", "a", "a", "a"},
+							{"b", "b", "b", "b", "b", "b"},
+							{"c", "c", "c", "c", "c", "c"},
+							{"d", "d", "d", "d", "d", "d"},
+							{"e", "e", "e", "e", "e", "e"},
+							{"f", "f" ,"f", "f", "f", "f"},
+							{"g", "g", "g", "g", "g", "g"}};
+		//task 2:manually print out the first character in each array
+		System.out.println(arr[0][0]);
+		System.out.println(arr[1][0]);
+		System.out.println(arr[2][0]);
+		System.out.println(arr[3][0]);
+		System.out.println(arr[4][0]);
+		System.out.println(arr[5][0]);
+		System.out.println(arr[6][0]);
+		
+		//task 3:create a for loop to print the first element in 
+		//each array
+		for (int i=0; i<arr.length;i++)
+		{
+			System.out.println(arr[i][0]);
+		}
+		
+		//task 4:manually print out all the elements in the first array
+		System.out.println(arr[0][0]);
+		System.out.println(arr[0][1]);
+		System.out.println(arr[0][2]);
+		System.out.println(arr[0][3]);
+		System.out.println(arr[0][4]);
+		System.out.println(arr[0][5]);
+		
+		//task 5:create a for loop to print all the elements
+		//in the first array
+		for (int i=0;i<arr[0].length;i++)
+		{
+			System.out.println(arr[0][i]);
+		}
+		
+		//task 6:create a for loop to print all the elements in
+		//each array
+		for (int i=0; i<arr[0].length;i++)
+		{
+			for (int j=0;j<arr.length;j++)
+			{
+				System.out.println(arr[j][i]);
+			}
+		}
+		
+		//create a method to print out each element in 
+		//row-major order
+		//TASK 1 2D Array Practice
+		print2DArray(arr);
+		
+		//create a 2d double array to pass to 
+		//method
+		double[][] arr2 = new double[3][3];
+		
+		//create method and pass it the 2d double
+		//array
+		//TASK 2 2D Array Practice
+		allOnes2D(arr2);
+
+	}
+
+	/**
+	 * method to change each element inside the array to 1.0
+	 * and return it
+	 * @param arr2
+	 * @return
+	 */
+	private static double[][] allOnes2D(double[][] arr2) 
+	{
+		//set copyArr to our 2d double array
+		double[][] copyArr = arr2;
+		
+		//create a for loop to change each element 
+		//to 1.0
+		for (int i=0; i<copyArr.length;i++)
+		{
+			for (int j=0;j<copyArr[0].length;j++)
+			{
+				copyArr[i][j]=1.0;
+			}
+		}
+		//return the brand new array
+		return copyArr;
+		
+	}
+
+	/**
+	 * method to print out each element in row-major
+	 *order
+	 * @param arr
+	 */
+	private static void print2DArray(String[][] arr) 
+	{
+		//for loop to traverse through 2d array
+		//horizontally from top to bottom
+		for (int i=0; i<arr.length;i++)
+		{
+			for (int j=0;j<arr[j].length;j++)
+			{
+				System.out.println(arr[i][j]);
+			}
+		}
+		
+	}
+
+}
